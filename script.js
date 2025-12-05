@@ -45,7 +45,7 @@ const display = document.getElementById("display");
 function updateDisplay(num){
     //replace first digit is zero
     //because 05 and 5 are same value
-    if(display.textContent[0]==='0'){
+    if(display.textContent[0]==='0'&&!display.textContent.includes(".")){
         display.textContent ='';
     }
     display.textContent += num;
@@ -129,8 +129,9 @@ const dot = document.getElementById(".");
 dot.addEventListener("click",() => pressDot());
 function pressDot(){
     checkOperatorPress();
-    if(!display.textContent.includes("."))
-        updateDisplay(".");
+    if(!display.textContent.includes(".")){
+        display.textContent += ".";
+    }
 };
 
 const AC = document.getElementById("AC");
@@ -222,7 +223,7 @@ function checkOperatorPress(){
     if(operatorPressed){
         operatorPressed = false;
         storeRightNum = true;
-        display.textContent = '';
+        display.textContent = '0';
     }
 }
 
