@@ -1,0 +1,27 @@
+#calculator {
+    background-color: lightskyblue;
+    width: 200px;
+    height: 300px;
+}
+
+#display {
+    display:inline-block;
+    background-color: white;
+    text-align:right;
+    width: 180px;
+    height: 20px;
+    margin: 10px;
+}
+
+button {
+    width: 42px;
+    height: 40px;
+}
+
+.row {
+    margin: 10px;
+}
+
+.bigButton {
+    width: 88px;
+}
